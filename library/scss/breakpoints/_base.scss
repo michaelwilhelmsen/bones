@@ -1,6 +1,4 @@
 /******************************************************************
-Site Name:
-Author:
 
 Stylesheet: Base Mobile Stylesheet
 
@@ -16,7 +14,7 @@ GENERAL STYLES
 *********************/
 
 body {
-	font-family: $lato;
+	font-family: $sans-serif;
 	font-size: 100%;
 	line-height: 1.5;
 	color: $text-color;
@@ -303,7 +301,7 @@ POSTS & CONTENT STYLES
 
 		/* post meta */
 		.byline {
-			color: $meta-gray;
+			color: $gray;
 			font-style: italic;
 			margin: 0;
 
@@ -347,7 +345,7 @@ POSTS & CONTENT STYLES
 				caption {
 					margin: 0 0 7px;
 					font-size: 0.75em;
-					color: $meta-gray;
+					color: $gray;
 					text-transform: uppercase;
 					letter-spacing: 1px;
 				}
@@ -385,7 +383,7 @@ POSTS & CONTENT STYLES
 				padding: 0 0 0 0.75em;
 				border-left: 3px solid $blue;
 				font-style: italic;
-				color: $meta-gray;
+				color: $gray;
 
 				&:before {}
 
@@ -622,7 +620,7 @@ COMMENT STYLES
 			font-style: italic;
 
 			a {
-				color: $meta-gray;
+				color: $gray;
 				text-decoration: none;
 
 				&:hover {
@@ -769,7 +767,7 @@ COMMENT FORM STYLES
 	}
 
 	.logged-in-as {
-		color: $meta-gray;
+		color: $gray;
 		font-style: italic;
 		margin: 0;
 
