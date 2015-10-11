@@ -887,7 +887,7 @@ textarea,
   border-radius: 3px;
   vertical-align: middle;
   box-shadow: none;
-  border: 0;
+  border: 1px solid #c0c3ca;
   width: 100%;
   max-width: 400px;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -1153,7 +1153,7 @@ body {
   font-size: 100%;
   line-height: 1.5;
   color: #000;
-  background-color: #eaedf2;
+  background-color: #f8f9fa;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
@@ -1318,7 +1318,7 @@ POSTS & CONTENT STYLES
   background-color: #fff;
   border-radius: 3px;
   margin-bottom: 1.5em;
-  border: 1px solid #eaedf2; }
+  border: 1px solid #c0c3ca; }
   .hentry header {
     border-bottom: 1px solid #f8f9fa;
     padding: 1.5em; }
@@ -1345,7 +1345,7 @@ POSTS & CONTENT STYLES
 /* style by tag (i.e. tag-news) */
 /* post meta */
 .byline {
-  color: #eaedf2;
+  color: #c0c3ca;
   font-style: italic;
   margin: 0; }
 
@@ -1362,27 +1362,27 @@ POSTS & CONTENT STYLES
     margin: 0 0 1.5em; }
   .entry-content table {
     width: 100%;
-    border: 1px solid #eaedf2;
+    border: 1px solid #c0c3ca;
     margin-bottom: 1.5em; }
     .entry-content table caption {
       margin: 0 0 7px;
       font-size: 0.75em;
-      color: #eaedf2;
+      color: #c0c3ca;
       text-transform: uppercase;
       letter-spacing: 1px; }
   .entry-content tr {
-    border-bottom: 1px solid #eaedf2; }
+    border-bottom: 1px solid #c0c3ca; }
     .entry-content tr:nth-child(even) {
       background-color: #f8f9fa; }
   .entry-content td {
     padding: 7px;
-    border-right: 1px solid #eaedf2; }
+    border-right: 1px solid #c0c3ca; }
     .entry-content td:last-child {
       border-right: 0; }
   .entry-content th {
     background-color: #f8f9fa;
-    border-bottom: 1px solid #eaedf2;
-    border-right: 1px solid #eaedf2; }
+    border-bottom: 1px solid #c0c3ca;
+    border-right: 1px solid #c0c3ca; }
     .entry-content th:last-child {
       border-right: 0; }
   .entry-content blockquote {
@@ -1390,7 +1390,7 @@ POSTS & CONTENT STYLES
     padding: 0 0 0 0.75em;
     border-left: 3px solid #2980b9;
     font-style: italic;
-    color: #eaedf2; }
+    color: #c0c3ca; }
   .entry-content dd {
     margin-left: 0;
     font-size: 0.9em;
@@ -1459,7 +1459,7 @@ PAGE NAVI STYLES
     float: left;
     display: inline;
     overflow: hidden;
-    border-right: 1px solid #eaedf2; }
+    border-right: 1px solid #c0c3ca; }
   .pagination a, .pagination span {
     margin: 0;
     text-decoration: none;
@@ -1526,7 +1526,7 @@ COMMENT STYLES
       font-size: 0.9em;
       font-style: italic; }
       .comment .vcard time a {
-        color: #eaedf2;
+        color: #c0c3ca;
         text-decoration: none; }
         .comment .vcard time a:hover {
           text-decoration: underline; }
@@ -1586,7 +1586,7 @@ COMMENT FORM STYLES
   margin: 0; }
 
 .logged-in-as {
-  color: #eaedf2;
+  color: #c0c3ca;
   font-style: italic;
   margin: 0; }
   .logged-in-as a {
@@ -1629,7 +1629,7 @@ SIDEBARS & ASIDES
   background-color: #fff;
   padding: 1.5em;
   text-align: center;
-  border: 1px solid #eaedf2;
+  border: 1px solid #c0c3ca;
   border-radius: 2px;
   margin-bottom: 1.5em; }
 

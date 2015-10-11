@@ -293,6 +293,44 @@ function bones_excerpt_more($more) {
 	return '...  <a class="excerpt-read-more" href="'. get_permalink( $post->ID ) . '" title="'. __( 'Read ', 'screenpartner' ) . esc_attr( get_the_title( $post->ID ) ).'">'. __( 'Read more &raquo;', 'screenpartner' ) .'</a>';
 }
 
+/*******************************
+THEME DEVELOPMENT FUNCTIONALITY
+*******************************/
+
+// Check if post is a $type custom post type,
+// inside or outside of the loop.
+// Ex: if ( is_post_type( 'book' ) ) {}
+function is_post_type($type){
+  global $wp_query;
+  if($type == get_post_type($wp_query->post->ID)) return true;
+  return false;
+}
+
+// Custom excerpt that strips all content but text.
+// Customizable word length, ending phrase and "read more" link.
+function custom_excerpt( $num_words = 45, $ending = '...', $post_id = null, $more_link = "Read more") {
+    global $post;
+
+    // Truncate post content
+    $current_post = $post_id ? get_post( $post_id ) : $post;
+		$excerpt_content = $current_post->post_excerpt;
+
+		if ($excerpt == '') {
+			// If excerpt is empty use content,
+			$excerpt = strip_shortcodes( $current_post->post_content );
+		} else {
+			// If excerpt has content use excerpt
+			$excerpt = strip_shortcodes( $current_post->post_excerpt );
+		}
+    $excerpt = wp_trim_words( $excerpt, $num_words, $ending );
+    $excerpt = trim($excerpt);
+
+
+    // Read more link
+    $excerpt .= '<a class="readmore-custom" href="' . get_permalink( $post ) . '" title="' . get_the_title( $post ) . '">' . $more_link . '</a>';
+
+    return $excerpt;
+}
 
 
 ?>

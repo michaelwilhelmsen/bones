@@ -559,27 +559,27 @@ body#tinymce.wp-editor {
     margin: 0 0 1.5em; }
   body#tinymce.wp-editor table {
     width: 100%;
-    border: 1px solid #eaedf2;
+    border: 1px solid #c0c3ca;
     margin-bottom: 1.5em; }
     body#tinymce.wp-editor table caption {
       margin: 0 0 7px;
       font-size: 0.75em;
-      color: #eaedf2;
+      color: #c0c3ca;
       text-transform: uppercase;
       letter-spacing: 1px; }
   body#tinymce.wp-editor tr {
-    border-bottom: 1px solid #eaedf2; }
+    border-bottom: 1px solid #c0c3ca; }
     body#tinymce.wp-editor tr:nth-child(even) {
       background-color: #f8f9fa; }
   body#tinymce.wp-editor td {
     padding: 7px;
-    border-right: 1px solid #eaedf2; }
+    border-right: 1px solid #c0c3ca; }
     body#tinymce.wp-editor td:last-child {
       border-right: 0; }
   body#tinymce.wp-editor th {
     background-color: #f8f9fa;
-    border-bottom: 1px solid #eaedf2;
-    border-right: 1px solid #eaedf2; }
+    border-bottom: 1px solid #c0c3ca;
+    border-right: 1px solid #c0c3ca; }
     body#tinymce.wp-editor th:last-child {
       border-right: 0; }
   body#tinymce.wp-editor blockquote {
@@ -587,7 +587,7 @@ body#tinymce.wp-editor {
     padding: 0 0 0 0.75em;
     border-left: 3px solid #2980b9;
     font-style: italic;
-    color: #eaedf2; }
+    color: #c0c3ca; }
   body#tinymce.wp-editor dd {
     margin-left: 0;
     font-size: 0.9em;
