@@ -445,6 +445,9 @@ No one likes a mess.
 /*********************
 COLORS
 *********************/
+/*********************
+FONT SIZES
+*********************/
 /******************************************************************
 
 Stylesheet: Typography
@@ -1151,6 +1154,7 @@ GENERAL STYLES
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 100%;
+  font-size: 16px;
   line-height: 1.5;
   color: #000;
   background-color: #f8f9fa;
@@ -1236,24 +1240,24 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
     text-decoration: none; }
 
 h1, .h1 {
-  font-size: 2.5em;
-  line-height: 1.333em; }
+  font-size: 32px;
+  line-height: 1.5; }
 
 h2, .h2 {
-  font-size: 1.75em;
-  line-height: 1.4em;
+  font-size: 26px;
+  line-height: 1.5;
   margin-bottom: 0.375em; }
 
 h3, .h3 {
-  font-size: 1.125em; }
+  font-size: 22px; }
 
 h4, .h4 {
-  font-size: 1.1em;
+  font-size: 16px;
   font-weight: 700; }
 
 h5, .h5 {
-  font-size: 0.846em;
-  line-height: 2.09em;
+  font-size: 14px;
+  line-height: 1.5;
   text-transform: uppercase;
   letter-spacing: 2px; }
 

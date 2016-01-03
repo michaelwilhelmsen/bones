@@ -13,23 +13,36 @@ No one likes a mess.
 COLORS
 *********************/
 
-$alert-yellow:      #ebe16f;
-$alert-red:         #fbe3e4;
-$alert-green:       #e6efc2;
-$alert-blue:        #d5edf8;
+$alert-yellow:     #ebe16f;
+$alert-red:        #fbe3e4;
+$alert-green:      #e6efc2;
+$alert-blue:       #d5edf8;
 
-$black:             #000;
-$white:             #fff;
+$black:            #000;
+$white:            #fff;
 
-$light-gray:        #f8f9fa;
-$gray:              #c0c3ca;
-$text-color:        $black;
+$light-gray:       #f8f9fa;
+$gray:             #c0c3ca;
+$text-color:       $black;
 
-$green:             #7dd667;
-$blue:              #2980b9;
+$green:            #7dd667;
+$blue:             #2980b9;
 
-$link-color:        $green;
-$link-hover:        darken($link-color, 9%);
+$link-color:       $green;
+$link-hover:       darken($link-color, 9%);
 
-$border-color:      $gray;
-$disabled-gray:     #cfcfcf;
+$border-color:     $gray;
+$disabled-gray:    #cfcfcf;
+
+
+/*********************
+FONT SIZES
+*********************/
+
+$basefontsize:    16px;
+
+$heading1:        32px;
+$heading2:        26px;
+$heading3:        22px;
+$heading4:        16px;
+$heading5:        14px;
