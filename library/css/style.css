@@ -19,6 +19,13 @@ the whole project.
 /* ==========================================================================
    HTML5 display definitions
    ========================================================================== */
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, header, footer, section, article, nav, canvas, aside, figcaption, figure, hgroup, menuitem, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  background: transparent; }
+
 /**
  * Correct `block` display not defined in IE 8/9.
  */
@@ -74,13 +81,17 @@ html {
   -ms-text-size-adjust: 100%;
   /* 2 */
   -webkit-text-size-adjust: 100%;
-  /* 2 */ }
+  /* 2 */
+  font-size: 62.5%; }
 
 /**
  * Remove default margin.
  */
 body {
-  margin: 0; }
+  margin: 0;
+  font-size: 18px;
+  font-size: 1.8rem;
+  line-height: 1.5em; }
 
 /* ==========================================================================
    Links
@@ -113,7 +124,7 @@ a:hover {
  */
 h1 {
   font-size: 2em;
-  margin: 0.67em 0; }
+  margin: 0; }
 
 /**
  * Address styling not present in IE 8/9, Safari 5, and Chrome.
@@ -127,7 +138,7 @@ abbr[title] {
 b,
 strong,
 .strong {
-  font-weight: bold; }
+  font-weight: 500; }
 
 /**
  * Address styling not present in Safari 5 and Chrome.
@@ -219,7 +230,7 @@ dl,
 menu,
 ol,
 ul {
-  margin: 1em 0; }
+  margin: 10px 0; }
 
 dd {
   margin: 0; }
@@ -416,12 +427,12 @@ table {
   white-space: nowrap;
   overflow: hidden; }
 
-.clearfix, .cf, .comment-respond {
+.clearfix, .cf {
   zoom: 1; }
-  .clearfix:before, .clearfix:after, .cf:before, .comment-respond:before, .cf:after, .comment-respond:after {
+  .clearfix:before, .clearfix:after, .cf:before, .cf:after {
     content: "";
     display: table; }
-  .clearfix:after, .cf:after, .comment-respond:after {
+  .clearfix:after, .cf:after {
     clear: both; }
 
 /*
@@ -819,7 +830,7 @@ Here's a quick video to show how it works:
 http://www.youtube.com/watch?v=hwdVpKiJzac
 
 *********************/
-.blue-btn, .comment-reply-link, #submit {
+.blue-btn {
   display: inline-block;
   position: relative;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -835,11 +846,11 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
   cursor: pointer;
   -webkit-transition: background-color 0.14s ease-in-out;
   transition: background-color 0.14s ease-in-out; }
-  .blue-btn:hover, .comment-reply-link:hover, #submit:hover, .blue-btn:focus, .comment-reply-link:focus, #submit:focus {
+  .blue-btn:hover, .blue-btn:focus {
     color: #fff;
     text-decoration: none;
     outline: none; }
-  .blue-btn:active, .comment-reply-link:active, #submit:active {
+  .blue-btn:active {
     top: 1px; }
 
 /*
@@ -847,11 +858,11 @@ An example button.
 You can use this example if you want. Just replace all the variables
 and it will create a button dependant on those variables.
 */
-.blue-btn, .comment-reply-link, #submit {
+.blue-btn {
   background-color: #2980b9; }
-  .blue-btn:hover, .comment-reply-link:hover, #submit:hover, .blue-btn:focus, .comment-reply-link:focus, #submit:focus {
+  .blue-btn:hover, .blue-btn:focus {
     background-color: #2574a8; }
-  .blue-btn:active, .comment-reply-link:active, #submit:active {
+  .blue-btn:active {
     background-color: #2472a4; }
 
 /******************************************************************
@@ -1145,11 +1156,6 @@ the other stylesheets. Remember, keep it light: Speed is Important.
 
 Stylesheet: Base Mobile Stylesheet
 
-Be light and don't over style since everything here will be
-loaded by mobile devices. You want to keep it as minimal as
-possible. This is called at the top of the main stylsheet
-and will be used across all viewports.
-
 ******************************************************************/
 /*********************
 GENERAL STYLES
@@ -1157,52 +1163,13 @@ GENERAL STYLES
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 100%;
-  font-size: 16px;
-  line-height: 1.5;
+  font-size: 1.6rem;
+  line-height: 1.5em;
   color: #000;
   background-color: #f8f9fa;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
-/********************
-WORDPRESS BODY CLASSES
-style a page via class
-********************/
-/* for sites that are read right to left (i.e. hebrew) */
-/* home page */
-/* blog template page */
-/* archive page */
-/* date archive page */
-/* replace the number to the corresponding page number */
-/* search page */
-/* search result page */
-/* no results search page */
-/* individual paged search (i.e. body.search-paged-3) */
-/* 404 page */
-/* single post page */
-/* individual post page by id (i.e. body.postid-73) */
-/* individual paged single (i.e. body.single-paged-3) */
-/* attatchment page */
-/* individual attatchment page (i.e. body.attachmentid-763) */
-/* style mime type pages */
-/* author page */
-/* user nicename (i.e. body.author-samueladams) */
-/* paged author archives (i.e. body.author-paged-4) for page 4 */
-/* category page */
-/* individual category page (i.e. body.category-6) */
-/* replace the number to the corresponding page number */
-/* tag page */
-/* individual tag page (i.e. body.tag-news) */
-/* replace the number to the corresponding page number */
-/* custom page template page */
-/* individual page template (i.e. body.page-template-contact-php */
-/* replace the number to the corresponding page number */
-/* parent page template */
-/* child page template */
-/* replace the number to the corresponding page number */
-/* if user is logged in */
-/* paged items like search results or archives */
-/* individual paged (i.e. body.paged-3) */
 /*********************
 LAYOUT & GRID STYLES
 *********************/
@@ -1213,19 +1180,13 @@ LAYOUT & GRID STYLES
 /*********************
 LINK STYLES
 *********************/
-a, a:visited {
+a {
   color: #7dd667;
   /* on hover */
-  /* on click */
   /* mobile tap color */ }
-  a:hover, a:focus, a:visited:hover, a:visited:focus {
+  a:hover, a:focus {
     color: #5ecc43; }
-  a:link, a:visited:link {
-    /*
-    this highlights links on iPhones/iPads.
-    so it basically works like the :hover selector
-    for mobile devices.
-    */
+  a:link {
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0.3); }
 
 /******************************************************************
@@ -1234,33 +1195,24 @@ H1, H2, H3, H4, H5 STYLES
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
   text-rendering: optimizelegibility;
   font-weight: 500;
-  /*
-  if you're going to use webfonts, be sure to check your weights
-  http://css-tricks.com/watch-your-font-weight/
-  */
-  /* removing text decoration from all headline links */ }
+  line-height: 1.5em; }
   h1 a, .h1 a, h2 a, .h2 a, h3 a, .h3 a, h4 a, .h4 a, h5 a, .h5 a {
     text-decoration: none; }
 
 h1, .h1 {
-  font-size: 32px;
-  line-height: 1.5; }
+  font-size: 3.2rem; }
 
 h2, .h2 {
-  font-size: 26px;
-  line-height: 1.5;
-  margin-bottom: 0.375em; }
+  font-size: 2.6rem; }
 
 h3, .h3 {
-  font-size: 22px; }
+  font-size: 2.2rem; }
 
 h4, .h4 {
-  font-size: 16px;
-  font-weight: 700; }
+  font-size: 1.6rem; }
 
 h5, .h5 {
-  font-size: 14px;
-  line-height: 1.5;
+  font-size: 1.4rem;
   text-transform: uppercase;
   letter-spacing: 2px; }
 
@@ -1278,41 +1230,17 @@ HEADER STYLES
 /*********************
 NAVIGATION STYLES
 *********************/
-/*
-all navs have a .nav class applied via
-the wp_menu function; this is so we can
-easily write one group of styles for
-the navs on the site so our css is cleaner
-and more scalable.
-*/
 .nav {
   border-bottom: 0;
   margin: 0;
   /* end .menu li */
   /* highlight current page */
   /* end current highlighters */ }
-  .nav li {
-    /*
-    so you really have to rethink your dropdowns for mobile.
-    you don't want to have it expand too much because the
-    screen is so small. How you manage your menu should
-    depend on the project. Here's some great info on it:
-    http://www.alistapart.com/articles/organizing-mobile/
-    */ }
-    .nav li a {
-      display: block;
-      color: #fff;
-      text-decoration: none;
-      padding: 0.75em;
-      /*
-      remember this is for mobile ONLY, so there's no need
-      to even declare hover styles here, you can do it in
-      the style.scss file where it's relevant. We want to
-      keep this file as small as possible!
-      */ }
-    .nav li ul.sub-menu li a,
-    .nav li ul.children li a {
-      padding-left: 30px; }
+  .nav li a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: 0.75em; }
 
 /* end .nav */
 /*********************
@@ -1332,15 +1260,6 @@ POSTS & CONTENT STYLES
 .entry-title {
   margin: 0; }
 
-/* want to style individual post classes? Booya! */
-/* post by id (i.e. post-3) */
-/* general post style */
-/* general article on a page style */
-/* general style on an attatchment */
-/* sticky post style */
-/* hentry class */
-/* style by category (i.e. category-videos) */
-/* style by tag (i.e. tag-news) */
 /* post meta */
 .byline {
   color: #c0c3ca;
@@ -1349,15 +1268,22 @@ POSTS & CONTENT STYLES
 
 /* entry content */
 .entry-content {
-  padding: 15px 0 0;
-  /*
-  image alignment on a screen this size may be
-  a bit difficult. It's set to start aligning
-  and floating images at the next breakpoint,
-  but it's up to you. Feel free to change it up.
-  */ }
+  padding: 15px 0 0; }
   .entry-content p {
     margin: 0 0 15px; }
+  .entry-content ul, .entry-content ol {
+    padding: 0 0 60px; }
+    .entry-content ul li, .entry-content ol li {
+      list-style: inside;
+      margin-left: 0;
+      padding-left: 22px;
+      text-indent: -22px; }
+      .entry-content ul li a, .entry-content ol li a {
+        display: inline; }
+    .entry-content ul:last-of-type, .entry-content ol:last-of-type {
+      margin-bottom: 0; }
+  .entry-content ol li {
+    list-style: decimal inside none; }
   .entry-content table {
     width: 100%;
     border: 1px solid #c0c3ca;
@@ -1429,9 +1355,6 @@ POSTS & CONTENT STYLES
     text-align: center; }
 
 /* end .wp-caption */
-/* image gallery styles */
-/* end .gallery */
-/* gallery caption styles */
 .tags {
   margin: 0; }
 
@@ -1487,142 +1410,9 @@ PAGE NAVI STYLES
   float: right; }
 
 /* end .wp-prev-next */
-/******************************************************************
-COMMENT STYLES
-******************************************************************/
-/* h3 comment title */
-#comments-title {
-  padding: 15px;
-  margin: 0;
-  border-top: 1px solid #f8f9fa;
-  /* number of comments span */ }
-
-.commentlist {
-  margin: 0;
-  list-style-type: none; }
-
-.comment {
-  position: relative;
-  clear: both;
-  overflow: hidden;
-  padding: 15px;
-  border-bottom: 1px solid #f8f9fa;
-  /* vcard */
-  /* end .commentlist .vcard */
-  /* end children */
-  /* general comment classes */ }
-  .comment .comment-author {
-    padding: 7px;
-    border: 0; }
-  .comment .vcard {
-    margin-left: 50px; }
-    .comment .vcard cite.fn {
-      font-weight: 700;
-      font-style: normal; }
-    .comment .vcard time {
-      display: block;
-      font-size: 0.9em;
-      font-style: italic; }
-      .comment .vcard time a {
-        color: #c0c3ca;
-        text-decoration: none; }
-        .comment .vcard time a:hover {
-          text-decoration: underline; }
-    .comment .vcard .avatar {
-      position: absolute;
-      left: 16px;
-      border-radius: 50%; }
-  .comment:last-child {
-    margin-bottom: 0; }
-  .comment .children {
-    margin: 0;
-    /* variations */
-    /* change number for different depth */ }
-  .comment[class*=depth-] {
-    margin-top: 15px; }
-  .comment.depth-1 {
-    margin-left: 0;
-    margin-top: 0; }
-  .comment:not(.depth-1) {
-    margin-top: 0;
-    margin-left: 7px;
-    padding: 7px; }
-  .comment.odd {
-    background-color: #fff; }
-  .comment.even {
-    background: #f8f9fa; }
-
-/* comment meta */
-/* comment content */
-.comment_content p {
-  margin: 0.7335em 0 15px;
-  font-size: 16px;
-  line-height: 1.5; }
-
-/* end .commentlist .comment_content */
-/* comment reply link */
-.comment-reply-link {
-  font-size: 16px;
-  float: right; }
-
-/* end .commentlist .comment-reply-link */
-/* edit comment link */
-.comment-edit-link {
-  font-style: italic;
-  margin: 0 7px;
-  text-decoration: none;
-  font-size: 16px; }
-
-/******************************************************************
-COMMENT FORM STYLES
-******************************************************************/
-.comment-respond {
-  padding: 15px;
-  border-top: 1px solid #f8f9fa; }
-
-#reply-title {
-  margin: 0; }
-
-.logged-in-as {
-  color: #c0c3ca;
-  font-style: italic;
-  margin: 0; }
-  .logged-in-as a {
-    color: #000; }
-
-.comment-form-comment {
-  margin: 15px 0 0.75em; }
-
-.form-allowed-tags {
-  padding: 15px;
-  background-color: #f8f9fa;
-  font-size: 16px; }
-
-/* comment submit button */
-#submit {
-  float: right;
-  font-size: 16px; }
-
-/* comment form title */
-#comment-form-title {
-  margin: 0 0 1.1em; }
-
-/* cancel comment reply link */
-/* logged in comments */
-/* allowed tags */
-#allowed_tags {
-  margin: 1.5em 10px 0.7335em 0; }
-
-/* no comments */
-.nocomments {
-  margin: 0 20px 1.1em; }
-
 /*********************
 SIDEBARS & ASIDES
 *********************/
-.widget ul li {
-  /* deep nesting */ }
-
 .no-widgets {
   background-color: #fff;
   padding: 15px;
@@ -1639,16 +1429,6 @@ FOOTER STYLES
   background-color: #000;
   color: #f8f9fa; }
 
-/*
-if you checked out the link above:
-http://www.alistapart.com/articles/organizing-mobile/
-you'll want to style the footer nav
-a bit more in-depth. Remember to keep
-it simple because you'll have to
-override these styles for the desktop
-view.
-*/
-/* end .footer-links */
 /*********************
 LARGER MOBILE DEVICES
 This is for devices like the Galaxy Note or something that's
@@ -1660,31 +1440,10 @@ tweeners.
   
   Stylesheet: 481px and Up Stylesheet
   
-  This stylesheet is loaded for larger devices. It's set to
-  481px because at 480px it would load on a landscaped iPhone.
-  
   ******************************************************************/
   /*********************
   NAVIGATION STYLES
   *********************/
-  /* .menu is clearfixed inside mixins.scss */
-  .menu {
-    /* end .menu ul */ }
-    .menu ul {
-      /* end .menu ul li */
-      /* highlight current page */
-      /* end current highlighters */ }
-      .menu ul li {
-        /*
-        plan your menus and drop-downs wisely.
-        */ }
-        .menu ul li a {
-          /*
-          you can use hover styles here even though this size
-          has the possibility of being a mobile device.
-          */ }
-
-  /* end .menu */
   /*********************
   POSTS & CONTENT STYLES
   *********************/
@@ -1708,12 +1467,7 @@ tweeners.
   /* end .entry-content */
   /*********************
   FOOTER STYLES
-  *********************/
-  /*
-  check your menus here. do they look good?
-  do they need tweaking?
-  */
-  /* end .footer-links */ }
+  *********************/ }
 /*********************
 TABLET & SMALLER LAPTOPS
 This is the average viewing window. So Desktops, Laptops, and
@@ -1724,8 +1478,6 @@ you can add resource intensive styles.
   /******************************************************************
   
   Stylesheet: Tablet & Small Desktop Stylesheet
-  
-  This size will work on iPads, other tablets, and desktops.
   
   ******************************************************************/
   /*********************
@@ -1822,33 +1574,9 @@ you can add resource intensive styles.
         margin-top: 0.75em;
         padding-left: 1em; }
 
-  /* links widget */
-  /* meta widget */
-  /* pages widget */
-  /* recent-posts widget */
-  /* archives widget */
-  /* tag-cloud widget */
-  /* calendar widget */
-  /* category widget */
-  /* recent-comments widget */
-  /* search widget */
-  /* text widget */
   /*********************
   FOOTER STYLES
-  *********************/
-  /*
-  you'll probably need to do quite a bit
-  of overriding here if you styled them for
-  mobile. Make sure to double check these!
-  */
-  .footer-links ul li {
-    /*
-    be careful with the depth of your menus.
-    it's very rare to have multi-depth menus in
-    the footer.
-    */ }
-
-  /* end .footer-links */ }
+  *********************/ }
 /*********************
 DESKTOP
 This is the average viewing window. So Desktops, Laptops, and
@@ -1859,9 +1587,6 @@ you can add resource intensive styles.
   /******************************************************************
   
   Stylesheet: Desktop Stylsheet
-  
-  This is the desktop size. It's larger than an iPad so it will only
-  be seen on the Desktop.
   
   ******************************************************************/
   .wrap {
@@ -1874,9 +1599,6 @@ This is for the larger monitors and possibly full screen viewers.
   /******************************************************************
   
   Stylesheet: Super Large Monitor Stylesheet
-  
-  You can add some advanced styles here if you like. This kicks in
-  on larger screens.
   
   ******************************************************************/ }
 /*********************

@@ -321,6 +321,12 @@ body#tinymce.wp-editor {
   larger than an iPhone but smaller than a tablet. Let's call them
   tweeners.
   *********************/ }
+  body#tinymce.wp-editor html, body#tinymce.wp-editor body, body#tinymce.wp-editor div, body#tinymce.wp-editor span, body#tinymce.wp-editor object, body#tinymce.wp-editor iframe, body#tinymce.wp-editor h1, body#tinymce.wp-editor h2, body#tinymce.wp-editor h3, body#tinymce.wp-editor h4, body#tinymce.wp-editor h5, body#tinymce.wp-editor h6, body#tinymce.wp-editor p, body#tinymce.wp-editor blockquote, body#tinymce.wp-editor pre, body#tinymce.wp-editor a, body#tinymce.wp-editor abbr, body#tinymce.wp-editor address, body#tinymce.wp-editor cite, body#tinymce.wp-editor code, body#tinymce.wp-editor del, body#tinymce.wp-editor dfn, body#tinymce.wp-editor em, body#tinymce.wp-editor img, body#tinymce.wp-editor ins, body#tinymce.wp-editor kbd, body#tinymce.wp-editor q, body#tinymce.wp-editor s, body#tinymce.wp-editor samp, body#tinymce.wp-editor small, body#tinymce.wp-editor strong, body#tinymce.wp-editor sub, body#tinymce.wp-editor sup, body#tinymce.wp-editor var, body#tinymce.wp-editor b, body#tinymce.wp-editor i, body#tinymce.wp-editor dl, body#tinymce.wp-editor dt, body#tinymce.wp-editor dd, body#tinymce.wp-editor ol, body#tinymce.wp-editor ul, body#tinymce.wp-editor li, body#tinymce.wp-editor fieldset, body#tinymce.wp-editor form, body#tinymce.wp-editor label, body#tinymce.wp-editor legend, body#tinymce.wp-editor table, body#tinymce.wp-editor caption, body#tinymce.wp-editor tbody, body#tinymce.wp-editor tfoot, body#tinymce.wp-editor thead, body#tinymce.wp-editor tr, body#tinymce.wp-editor th, body#tinymce.wp-editor td, body#tinymce.wp-editor header, body#tinymce.wp-editor footer, body#tinymce.wp-editor section, body#tinymce.wp-editor article, body#tinymce.wp-editor nav, body#tinymce.wp-editor canvas, body#tinymce.wp-editor aside, body#tinymce.wp-editor figcaption, body#tinymce.wp-editor figure, body#tinymce.wp-editor hgroup, body#tinymce.wp-editor menuitem, body#tinymce.wp-editor summary, body#tinymce.wp-editor time, body#tinymce.wp-editor mark, body#tinymce.wp-editor audio, body#tinymce.wp-editor video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    background: transparent; }
   body#tinymce.wp-editor article,
   body#tinymce.wp-editor aside,
   body#tinymce.wp-editor details,
@@ -350,9 +356,13 @@ body#tinymce.wp-editor {
     -ms-text-size-adjust: 100%;
     /* 2 */
     -webkit-text-size-adjust: 100%;
-    /* 2 */ }
+    /* 2 */
+    font-size: 62.5%; }
   body#tinymce.wp-editor body {
-    margin: 0; }
+    margin: 0;
+    font-size: 18px;
+    font-size: 1.8rem;
+    line-height: 1.5em; }
   body#tinymce.wp-editor a {
     background: transparent; }
   body#tinymce.wp-editor a:focus {
@@ -362,13 +372,13 @@ body#tinymce.wp-editor {
     outline: 0; }
   body#tinymce.wp-editor h1 {
     font-size: 2em;
-    margin: 0.67em 0; }
+    margin: 0; }
   body#tinymce.wp-editor abbr[title] {
     border-bottom: 1px dotted; }
   body#tinymce.wp-editor b,
   body#tinymce.wp-editor strong,
   body#tinymce.wp-editor .strong {
-    font-weight: bold; }
+    font-weight: 500; }
   body#tinymce.wp-editor dfn,
   body#tinymce.wp-editor em,
   body#tinymce.wp-editor .em {
@@ -414,7 +424,7 @@ body#tinymce.wp-editor {
   body#tinymce.wp-editor menu,
   body#tinymce.wp-editor ol,
   body#tinymce.wp-editor ul {
-    margin: 1em 0; }
+    margin: 10px 0; }
   body#tinymce.wp-editor dd {
     margin: 0; }
   body#tinymce.wp-editor menu {

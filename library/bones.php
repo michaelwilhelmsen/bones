@@ -293,9 +293,32 @@ function bones_excerpt_more($more) {
 	return '...  <a class="excerpt-read-more" href="'. get_permalink( $post->ID ) . '" title="'. __( 'Read ', 'screenpartner' ) . esc_attr( get_the_title( $post->ID ) ).'">'. __( 'Read more &raquo;', 'screenpartner' ) .'</a>';
 }
 
+// Wrap embeds like Youtube and Vimeo in
+// surrounding div for easier style possibilities
+function wrap_embed_with_div($html, $url, $attr) {
+ return '<div class="video-container">' . $html . '</div>';
+}
+add_filter('embed_oembed_html', 'wrap_embed_with_div', 10, 3);
+
 /*******************************
 THEME DEVELOPMENT FUNCTIONALITY
 *******************************/
+
+// Button shortcode
+// Customize to client
+function sp_button_shortcode( $atts ) {
+  extract( shortcode_atts(
+    array(
+      'title' => 'Title',
+      'url' => '',
+      'color' => ''
+    ),
+    $atts
+  ));
+  return '<a class="btn ' . $color . '" href="' . $url . '">' . $title . '</a>';
+}
+add_shortcode( 'btn', 'sp_button_shortcode' );
+
 
 // Check if post is a $type custom post type,
 // inside or outside of the loop.
@@ -309,27 +332,26 @@ function is_post_type($type){
 // Custom excerpt that strips all content but text.
 // Customizable word length, ending phrase and "read more" link.
 function custom_excerpt( $num_words = 45, $ending = '...', $post_id = null, $more_link = "Read more") {
-    global $post;
+  global $post;
 
-    // Truncate post content
-    $current_post = $post_id ? get_post( $post_id ) : $post;
-		$excerpt_content = $current_post->post_excerpt;
+  // Truncate post content
+  $current_post = $post_id ? get_post( $post_id ) : $post;
+	$excerpt = $current_post->post_excerpt;
 
-		if ($excerpt == '') {
-			// If excerpt is empty use content,
-			$excerpt = strip_shortcodes( $current_post->post_content );
-		} else {
-			// If excerpt has content use excerpt
-			$excerpt = strip_shortcodes( $current_post->post_excerpt );
-		}
-    $excerpt = wp_trim_words( $excerpt, $num_words, $ending );
-    $excerpt = trim($excerpt);
+	if ($excerpt == '') {
+		// If excerpt is empty use content,
+		$excerpt = strip_shortcodes( $current_post->post_content );
+	} else {
+		// If excerpt has content use excerpt
+		$excerpt = strip_shortcodes( $excerpt );
+	}
+  $excerpt = wp_trim_words( $excerpt, $num_words, $ending );
+  $excerpt = trim($excerpt);
 
+  // Read more link (COMMENT OUT THIS AND $more_link IF NOT LINKABLE)
+  $excerpt .= '<a class="readmore-custom" href="' . get_permalink( $post ) . '" title="' . get_the_title( $post ) . '">' . $more_link . '</a>';
 
-    // Read more link
-    $excerpt .= '<a class="readmore-custom" href="' . get_permalink( $post ) . '" title="' . get_the_title( $post ) . '">' . $more_link . '</a>';
-
-    return $excerpt;
+  return $excerpt;
 }
 
 

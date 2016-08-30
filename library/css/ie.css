@@ -121,31 +121,10 @@ whatever you use in here.
 
 Stylesheet: 481px and Up Stylesheet
 
-This stylesheet is loaded for larger devices. It's set to
-481px because at 480px it would load on a landscaped iPhone.
-
 ******************************************************************/
 /*********************
 NAVIGATION STYLES
 *********************/
-/* .menu is clearfixed inside mixins.scss */
-.menu {
-  /* end .menu ul */ }
-  .menu ul {
-    /* end .menu ul li */
-    /* highlight current page */
-    /* end current highlighters */ }
-    .menu ul li {
-      /*
-      plan your menus and drop-downs wisely.
-      */ }
-      .menu ul li a {
-        /*
-        you can use hover styles here even though this size
-        has the possibility of being a mobile device.
-        */ }
-
-/* end .menu */
 /*********************
 POSTS & CONTENT STYLES
 *********************/
@@ -170,16 +149,9 @@ POSTS & CONTENT STYLES
 /*********************
 FOOTER STYLES
 *********************/
-/*
-check your menus here. do they look good?
-do they need tweaking?
-*/
-/* end .footer-links */
 /******************************************************************
 
 Stylesheet: Tablet & Small Desktop Stylesheet
-
-This size will work on iPads, other tablets, and desktops.
 
 ******************************************************************/
 /*********************
@@ -276,39 +248,12 @@ SIDEBARS & ASIDES
       margin-top: 0.75em;
       padding-left: 1em; }
 
-/* links widget */
-/* meta widget */
-/* pages widget */
-/* recent-posts widget */
-/* archives widget */
-/* tag-cloud widget */
-/* calendar widget */
-/* category widget */
-/* recent-comments widget */
-/* search widget */
-/* text widget */
 /*********************
 FOOTER STYLES
 *********************/
-/*
-you'll probably need to do quite a bit
-of overriding here if you styled them for
-mobile. Make sure to double check these!
-*/
-.footer-links ul li {
-  /*
-  be careful with the depth of your menus.
-  it's very rare to have multi-depth menus in
-  the footer.
-  */ }
-
-/* end .footer-links */
 /******************************************************************
 
 Stylesheet: Desktop Stylsheet
-
-This is the desktop size. It's larger than an iPad so it will only
-be seen on the Desktop.
 
 ******************************************************************/
 .wrap {

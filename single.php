@@ -43,6 +43,8 @@
 
 						<?php endif; ?>
 
+						<?php load_template(TEMPLATEPATH . '/library/modules/elementer/next-previous.php'); ?>
+
 					</main>
 
 					<?php get_sidebar(); ?>
