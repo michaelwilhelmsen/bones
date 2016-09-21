@@ -11,8 +11,8 @@ sidebars, comments, etc.
 // LOAD BONES CORE (if you remove this, the theme will break)
 require_once( 'library/bones.php' );
 
-// CUSTOMIZE THE WORDPRESS ADMIN (off by default)
-// require_once( 'library/admin.php' );
+// CUSTOMIZE THE WORDPRESS ADMIN (on by default)
+require_once( 'library/admin.php' );
 
 /*********************
 LAUNCH BONES
@@ -73,16 +73,14 @@ if ( ! isset( $content_width ) ) {
 /************* THUMBNAIL SIZE OPTIONS *************/
 
 // Thumbnail sizes
-add_image_size( 'bones-thumb-600', 600, 150, true );
-add_image_size( 'bones-thumb-300', 300, 100, true );
+add_image_size( 'sp-thumb-600', 600, 150, true );
 
 add_filter( 'image_size_names_choose', 'bones_custom_image_sizes' );
 
 function bones_custom_image_sizes( $sizes ) {
-    return array_merge( $sizes, array(
-        'bones-thumb-600' => __('600px by 150px'),
-        'bones-thumb-300' => __('300px by 100px'),
-    ) );
+  return array_merge( $sizes, array(
+    'sp-thumb-600' => __('600px by 150px'),
+  ));
 }
 
 /*
@@ -99,8 +97,8 @@ function bones_theme_customizer($wp_customize) {
   // Uncomment the below lines to remove the default customize sections
 
   // $wp_customize->remove_section('title_tagline');
-  // $wp_customize->remove_section('colors');
-  // $wp_customize->remove_section('background_image');
+  $wp_customize->remove_section('colors');
+  $wp_customize->remove_section('background_image');
   // $wp_customize->remove_section('static_front_page');
   // $wp_customize->remove_section('nav');
 
@@ -168,13 +166,5 @@ function bones_comments( $comment, $args, $depth ) {
   <?php // </li> is added by WordPress automatically ?>
 <?php
 } // don't remove this bracket!
-
-
-/* Declare external fonts */
-function bones_fonts() {
-  wp_enqueue_style('googleFonts', 'http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic');
-}
-
-add_action('wp_enqueue_scripts', 'bones_fonts');
 
 /* DON'T DELETE THIS CLOSING TAG */ ?>
