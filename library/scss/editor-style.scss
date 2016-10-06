@@ -104,6 +104,29 @@ body#tinymce.wp-editor {
 			margin: 0 0 1.5em;
 		}
 
+		ul, ol {
+			padding: 0 0 $base-padding;
+
+			li {
+				list-style: initial;
+				margin-left: 20px;
+
+				a {
+					display: inline;
+				}
+			}
+
+			&:last-of-type {
+				margin-bottom: 0;
+			}
+		}
+
+		ol {
+			li {
+				list-style-type: decimal;
+			}
+		}
+
 		table {
 			width: 100%;
 			border: 1px solid $gray;

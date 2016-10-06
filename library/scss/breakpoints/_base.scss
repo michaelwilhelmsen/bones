@@ -90,11 +90,14 @@ HEADER STYLES
 	background-color: $black;
 }
 
-	#logo {
-		margin: 0.75em 0;
+	.custom-logo-link {
+		display: inline-block;
+		max-width: 60px;
+		line-height: 0;
 
-		a {
-			color: $white;
+		.custom-logo {
+			width: 100%;
+			height: auto;
 		}
 	}
 
@@ -182,10 +185,8 @@ POSTS & CONTENT STYLES
 				padding: 0 0 $base-padding;
 
 				li {
-					list-style: inside;
-					margin-left: 0;
-					padding-left: 22px;
-					text-indent: -22px;
+					list-style: initial;
+					margin-left: 20px;
 
 					a {
 						display: inline;
@@ -199,7 +200,7 @@ POSTS & CONTENT STYLES
 
 			ol {
 				li {
-					list-style: decimal inside none;
+					list-style-type: decimal;
 				}
 			}
 
@@ -284,6 +285,54 @@ POSTS & CONTENT STYLES
 				padding: $small-padding;
 				margin: 0 0 $small-padding;
 				border-radius: 3px;
+			}
+
+			.gallery {
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: flex;
+				-ms-flex-wrap: wrap;
+				flex-wrap: wrap;
+				margin: 0 -$half-padding;
+
+				.gallery-item {
+					padding: 0 $half-padding;
+
+					a {
+						display: block;
+						line-height: 0;
+					}
+
+					img {
+						margin: 0;
+					}
+				}
+
+				&.gallery-columns-2 {
+					.gallery-item {
+						width: 50%;
+					}
+				}
+				&.gallery-columns-3 {
+					.gallery-item {
+						width: 33.333333%;
+					}
+				}
+				&.gallery-columns-4 {
+					.gallery-item {
+						width: 25%;
+					}
+				}
+				&.gallery-columns-5 {
+					.gallery-item {
+						width: 20%;
+					}
+				}
+				&.gallery-columns-6 {
+					.gallery-item {
+						width: 16.666666667%;
+					}
+				}
 			}
 
 		} /* end .entry-content */

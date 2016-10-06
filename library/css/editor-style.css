@@ -573,6 +573,17 @@ body#tinymce.wp-editor {
     letter-spacing: 2px; }
   body#tinymce.wp-editor p {
     margin: 0 0 1.5em; }
+  body#tinymce.wp-editor ul, body#tinymce.wp-editor ol {
+    padding: 0 0 60px; }
+    body#tinymce.wp-editor ul li, body#tinymce.wp-editor ol li {
+      list-style: initial;
+      margin-left: 20px; }
+      body#tinymce.wp-editor ul li a, body#tinymce.wp-editor ol li a {
+        display: inline; }
+    body#tinymce.wp-editor ul:last-of-type, body#tinymce.wp-editor ol:last-of-type {
+      margin-bottom: 0; }
+  body#tinymce.wp-editor ol li {
+    list-style-type: decimal; }
   body#tinymce.wp-editor table {
     width: 100%;
     border: 1px solid #c0c3ca;
