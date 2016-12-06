@@ -2,52 +2,42 @@
 
 Stylesheet: Grid Stylesheet
 
-I've seperated the grid so you can swap it out easily. It's
-called at the top the style.scss stylesheet.
-
-There are a ton of grid solutions out there. You should definitely
-experiment with your own. Here are some recommendations:
-
-http://gridsetapp.com - Love this site. Responsive Grids made easy.
-http://susy.oddbird.net/ - Grids using Compass. Very elegant.
-http://gridpak.com/ - Create your own responsive grid.
-https://github.com/dope/lemonade - Neat lightweight grid.
-
-
-The grid below is a custom built thingy I modeled a bit after
-Gridset. It's VERY basic and probably shouldn't be used on
-your client projects. The idea is you learn how to roll your
-own grids. It's better in the long run and allows you full control
-over your project's layout.
+Still using this pretty basic grid, but it's customized a bit to
+feel more like Bootstrap.
+Wrap grid columns in grid-skin wrappers.
 
 ******************************************************************/
 
 // using a mixin since we can't use placeholder selectors
 @mixin grid-col {
   float: left;
-  padding-right: 0.75em;
-
 }
 
-// the last column
-.last-col {
-  float: right;
-  padding-right: 0 !important;
+.with-padding {
+  padding: 0 $small-padding;
+}
+
+.with-padding-large {
+  padding: 0 $base-padding;
+}
+
+.grid-skin {
+  position: relative;
+  margin: 0 -$small-padding;
+}
+
+.grid-skin-large {
+  position: relative;
+  margin: 0 -$base-padding;
 }
 
 
-/*
-Mobile Grid Styles
-These are the widths for the mobile grid.
-There are four types, but you can add or customize
-them however you see fit.
-*/
+/* Mobile Grid Styles */
 @media (max-width: 767px) {
 
   .m-all {
     @include grid-col;
     width: 100%;
-    padding-right: 0;
   }
 
   .m-1of2 {
@@ -77,6 +67,41 @@ them however you see fit.
 
 } // end mobile styles
 
+/* Large Mobile to Tablet Grid Styles */
+@media (min-width: 480px) and (max-width: 767px) {
+
+  .mt-all {
+    @include grid-col;
+    width: 100%;
+  }
+
+  .mt-1of2 {
+    @include grid-col;
+    width: 50%;
+  }
+
+  .mt-1of3 {
+    @include grid-col;
+    width: 33.33%;
+  }
+
+  .mt-2of3 {
+    @include grid-col;
+    width: 66.66%;
+  }
+
+  .mt-1of4 {
+    @include grid-col;
+    width: 25%;
+  }
+
+  .mt-3of4 {
+    @include grid-col;
+    width: 75%;
+  }
+
+} // end mobile styles
+
 
 /* Portrait tablet to landscape */
 @media (min-width: 768px) and (max-width: 1029px) {
@@ -84,7 +109,6 @@ them however you see fit.
   .t-all {
     @include grid-col;
     width: 100%;
-    padding-right: 0;
   }
 
   .t-1of2 {
@@ -140,7 +164,6 @@ them however you see fit.
   .d-all  {
     @include grid-col;
     width: 100%;
-    padding-right: 0;
   }
 
   .d-1of2 {

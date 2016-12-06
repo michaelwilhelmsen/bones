@@ -176,10 +176,10 @@ hr {
 */
 
 p {
-  -webkit-hyphens: auto;
-  -epub-hyphens:   auto;
-  -moz-hyphens:    auto;
-  hyphens:         auto;
+  -webkit-hyphens: none;
+  -epub-hyphens:   manual;
+  -moz-hyphens:    manual;
+  hyphens:         manual;
 
 }
 

@@ -50,15 +50,6 @@ some nice typographical defaults
 more here: http://www.newnet-soft.com/blog/csstypography
 */
 p {
-  -ms-word-wrap: break-word;
-  word-break: break-word;
-  word-wrap: break-word;
-  -webkit-hyphens: auto;
-  -moz-hyphens: auto;
-  hyphens: auto;
-  -webkit-hyphenate-before: 2;
-  -webkit-hyphenate-after: 3;
-  hyphenate-lines: 3;
   -webkit-font-feature-settings: "liga", "dlig";
   -moz-font-feature-settings: "liga=1, dlig=1";
   -ms-font-feature-settings: "liga", "dlig";
@@ -105,6 +96,14 @@ BOX SIZING
 /* @include box-sizing(border-box); */
 /* NOTE: value of "padding-box" is only supported in Gecko. So
 probably best not to use it. I mean, were you going to anyway? */
+/*********************
+PSEUDO
+*********************/
+/* @include pseudo; */
+/*********************
+CSS TRIANGLE
+*********************/
+/* @include css-triangle(black, up, 6px false); */
 /******************************************************************
 
 Stylesheet: IE Grid Styles
@@ -146,9 +145,6 @@ POSTS & CONTENT STYLES
     clear: both; }
 
 /* end .entry-content */
-/*********************
-FOOTER STYLES
-*********************/
 /******************************************************************
 
 Stylesheet: Tablet & Small Desktop Stylesheet
@@ -180,16 +176,9 @@ NAVIGATION STYLES
   .nav li {
     float: left;
     position: relative;
-    /*
-    plan your menus and drop-downs wisely.
-    */
     /* showing sub-menus */ }
     .nav li a {
-      border-bottom: 0;
-      /*
-      you can use hover styles here even though this size
-      has the possibility of being a mobile device.
-      */ }
+      border-bottom: 0; }
       .nav li a:hover, .nav li a:focus {
         color: #fff;
         text-decoration: underline; }
@@ -200,29 +189,21 @@ NAVIGATION STYLES
       border-top: 0;
       position: absolute;
       visibility: hidden;
-      z-index: 8999;
-      /* highlight sub-menu current page */ }
-      .nav li ul.sub-menu li,
-      .nav li ul.children li {
-        /*
-        if you need to go deeper, go nuts
-        just remember deeper menus suck
-        for usability. k, bai.
-        */ }
-        .nav li ul.sub-menu li a,
-        .nav li ul.children li a {
-          padding-left: 10px;
-          border-right: 0;
-          display: block;
-          width: 180px;
-          border-bottom: 1px solid #ccc; }
-        .nav li ul.sub-menu li:last-child a,
-        .nav li ul.children li:last-child a {
-          border-bottom: 0; }
-        .nav li ul.sub-menu li ul,
-        .nav li ul.children li ul {
-          top: 0;
-          left: 100%; }
+      z-index: 8999; }
+      .nav li ul.sub-menu li a,
+      .nav li ul.children li a {
+        padding-left: 10px;
+        border-right: 0;
+        display: block;
+        width: 180px;
+        border-bottom: 1px solid #ccc; }
+      .nav li ul.sub-menu li:last-child a,
+      .nav li ul.children li:last-child a {
+        border-bottom: 0; }
+      .nav li ul.sub-menu li ul,
+      .nav li ul.children li ul {
+        top: 0;
+        left: 100%; }
     .nav li:hover > ul {
       top: auto;
       visibility: visible; }
@@ -235,7 +216,6 @@ SIDEBARS & ASIDES
   margin-top: 0; }
 
 .widgettitle {
-  border-bottom: 2px solid #444;
   margin-bottom: 0.75em; }
 
 .widget {
@@ -248,9 +228,6 @@ SIDEBARS & ASIDES
       margin-top: 0.75em;
       padding-left: 1em; }
 
-/*********************
-FOOTER STYLES
-*********************/
 /******************************************************************
 
 Stylesheet: Desktop Stylsheet
