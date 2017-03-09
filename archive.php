@@ -30,16 +30,8 @@
 								</header>
 
 								<section class="entry-content cf">
-
-									<?php the_post_thumbnail( 'bones-thumb-300' ); ?>
-
 									<?php the_excerpt(); ?>
-
 								</section>
-
-								<footer class="article-footer">
-
-								</footer>
 
 							</article>
 

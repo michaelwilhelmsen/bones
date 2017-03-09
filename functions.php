@@ -73,13 +73,13 @@ if ( ! isset( $content_width ) ) {
 /************* THUMBNAIL SIZE OPTIONS *************/
 
 // Thumbnail sizes
-add_image_size( 'sp-thumb-600', 600, 150, true );
+add_image_size( 'sp-thumb-600', 640, 240, false );
 
 add_filter( 'image_size_names_choose', 'bones_custom_image_sizes' );
 
 function bones_custom_image_sizes( $sizes ) {
   return array_merge( $sizes, array(
-    'sp-thumb-600' => __('600px by 150px'),
+    'sp-thumb-600' => __('640px by 240px'),
   ));
 }
 
@@ -117,9 +117,9 @@ add_action( 'customize_register', 'bones_theme_customizer' );
 // Sidebars & Widgetizes Areas
 function bones_register_sidebars() {
 	register_sidebar(array(
-		'id' => 'sidebar1',
-		'name' => __( 'Sidebar 1', 'screenpartner' ),
-		'description' => __( 'The first (primary) sidebar.', 'screenpartner' ),
+		'id' => 'sidebar_main',
+		'name' => __( 'Main Sidebar', 'screenpartner' ),
+		'description' => __( 'The primary sidebar.', 'screenpartner' ),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget' => '</div>',
 		'before_title' => '<h4 class="widgettitle">',

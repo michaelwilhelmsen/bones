@@ -215,10 +215,6 @@ here or just use this to establish your typographical grid.
   /*********************
 FONT FACE (IN YOUR FACE)
 *********************/
-  /*
-some nice typographical defaults
-more here: http://www.newnet-soft.com/blog/csstypography
-*/
   /******************************************************************
 
 Stylesheet: Sass Functions
@@ -310,12 +306,14 @@ PSEUDO
 CSS TRIANGLE
 *********************/
   /* @include css-triangle(black, up, 6px false); */
-  width: 731px;
+  max-width: 731px;
+  width: 100%;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 100%;
   line-height: 1.5;
   color: #000;
   -webkit-font-smoothing: antialiased;
+  padding: 20px;
   /*********************
 	LINK STYLES
 	*********************/
@@ -323,6 +321,7 @@ CSS TRIANGLE
 	H1, H2, H3, H4, H5 STYLES
 	******************************************************************/
   padding: 1.5em 1.5em 0;
+  /* end .wp-caption */
   /*********************
 		LARGER MOBILE DEVICES
 		This is for devices like the Galaxy Note or something that's
@@ -534,12 +533,6 @@ CSS TRIANGLE
   body#tinymce.wp-editor span.amp {
     font-family: Baskerville,'Goudy Old Style',Palatino,'Book Antiqua',serif !important;
     font-style: italic; }
-  body#tinymce.wp-editor p {
-    -webkit-font-feature-settings: "liga", "dlig";
-    -moz-font-feature-settings: "liga=1, dlig=1";
-    -ms-font-feature-settings: "liga", "dlig";
-    -o-font-feature-settings: "liga", "dlig";
-    font-feature-settings: "liga", "dlig"; }
   body#tinymce.wp-editor a, body#tinymce.wp-editor a:visited {
     color: #7dd667;
     /* on hover */
@@ -550,15 +543,14 @@ CSS TRIANGLE
       -webkit-tap-highlight-color: rgba(0, 0, 0, 0.3); }
   body#tinymce.wp-editor h1, body#tinymce.wp-editor .h1, body#tinymce.wp-editor h2, body#tinymce.wp-editor .h2, body#tinymce.wp-editor h3, body#tinymce.wp-editor .h3, body#tinymce.wp-editor h4, body#tinymce.wp-editor .h4, body#tinymce.wp-editor h5, body#tinymce.wp-editor .h5 {
     text-rendering: optimizelegibility;
-    font-weight: 500; }
+    font-weight: 500;
+    line-height: 1.05em; }
     body#tinymce.wp-editor h1 a, body#tinymce.wp-editor .h1 a, body#tinymce.wp-editor h2 a, body#tinymce.wp-editor .h2 a, body#tinymce.wp-editor h3 a, body#tinymce.wp-editor .h3 a, body#tinymce.wp-editor h4 a, body#tinymce.wp-editor .h4 a, body#tinymce.wp-editor h5 a, body#tinymce.wp-editor .h5 a {
       text-decoration: none; }
   body#tinymce.wp-editor h1, body#tinymce.wp-editor .h1 {
-    font-size: 2.5em;
-    line-height: 1.333em; }
+    font-size: 2.5em; }
   body#tinymce.wp-editor h2, body#tinymce.wp-editor .h2 {
     font-size: 1.75em;
-    line-height: 1.4em;
     margin-bottom: 0.375em; }
   body#tinymce.wp-editor h3, body#tinymce.wp-editor .h3 {
     font-size: 1.125em; }
@@ -570,23 +562,26 @@ CSS TRIANGLE
     line-height: 2.09em;
     text-transform: uppercase;
     letter-spacing: 2px; }
-  body#tinymce.wp-editor p {
-    margin: 0 0 1.5em; }
+  body#tinymce.wp-editor > * {
+    margin-bottom: 20px !important; }
+    body#tinymce.wp-editor > *:first-child {
+      margin-top: 0; }
+    body#tinymce.wp-editor > *:last-child {
+      margin-bottom: 0; }
   body#tinymce.wp-editor ul, body#tinymce.wp-editor ol {
-    padding: 0 0 60px; }
+    margin-top: 0;
+    padding: 0; }
     body#tinymce.wp-editor ul li, body#tinymce.wp-editor ol li {
       list-style: initial;
       margin-left: 20px; }
       body#tinymce.wp-editor ul li a, body#tinymce.wp-editor ol li a {
         display: inline; }
-    body#tinymce.wp-editor ul:last-of-type, body#tinymce.wp-editor ol:last-of-type {
-      margin-bottom: 0; }
   body#tinymce.wp-editor ol li {
     list-style-type: decimal; }
   body#tinymce.wp-editor table {
+    margin: 0 0 20px;
     width: 100%;
-    border: 1px solid #c0c3ca;
-    margin-bottom: 1.5em; }
+    border: 1px solid #c0c3ca; }
     body#tinymce.wp-editor table caption {
       margin: 0 0 7px;
       font-size: 0.75em;
@@ -609,18 +604,18 @@ CSS TRIANGLE
     body#tinymce.wp-editor th:last-child {
       border-right: 0; }
   body#tinymce.wp-editor blockquote {
-    margin: 0 0 1.5em 0.75em;
-    padding: 0 0 0 0.75em;
-    border-left: 3px solid #2980b9;
+    margin: 0 0 20px;
+    padding: 0 0 0 20px;
+    border-left: 3px solid #7dd667;
     font-style: italic;
     color: #c0c3ca; }
   body#tinymce.wp-editor dd {
     margin-left: 0;
     font-size: 0.9em;
     color: #787878;
-    margin-bottom: 1.5em; }
+    margin-bottom: 5px; }
   body#tinymce.wp-editor img {
-    margin: 0 0 1.5em 0;
+    margin: 0 0 5px 0;
     max-width: 100%;
     height: auto; }
   body#tinymce.wp-editor .size-auto,
@@ -634,9 +629,46 @@ CSS TRIANGLE
     background: #000;
     color: #f8f9fa;
     font-size: 0.9em;
-    padding: 1.5em;
-    margin: 0 0 1.5em;
+    padding: 5px;
+    margin: 0 0 5px;
     border-radius: 3px; }
+  body#tinymce.wp-editor .gallery {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin: 0 -10px 20px; }
+    body#tinymce.wp-editor .gallery .gallery-item {
+      padding: 0 10px; }
+      body#tinymce.wp-editor .gallery .gallery-item a {
+        display: block;
+        line-height: 0; }
+      body#tinymce.wp-editor .gallery .gallery-item img {
+        margin: 0; }
+    body#tinymce.wp-editor .gallery.gallery-columns-2 .gallery-item {
+      width: 50%; }
+    body#tinymce.wp-editor .gallery.gallery-columns-3 .gallery-item {
+      width: 33.333333%; }
+    body#tinymce.wp-editor .gallery.gallery-columns-4 .gallery-item {
+      width: 25%; }
+    body#tinymce.wp-editor .gallery.gallery-columns-5 .gallery-item {
+      width: 20%; }
+    body#tinymce.wp-editor .gallery.gallery-columns-6 .gallery-item {
+      width: 16.666666667%; }
+  body#tinymce.wp-editor .wp-caption {
+    max-width: 100%;
+    background: #eee;
+    padding: 5px;
+    /* images inside wp-caption */ }
+    body#tinymce.wp-editor .wp-caption img {
+      max-width: 100%;
+      margin-bottom: 0;
+      width: 100%; }
+    body#tinymce.wp-editor .wp-caption p.wp-caption-text {
+      font-size: 0.85em;
+      margin: 4px 0 7px;
+      text-align: center; }
   @media only screen and (min-width: 481px) {
     body#tinymce.wp-editor {
       /* at this larger size, we can start to align images */ }

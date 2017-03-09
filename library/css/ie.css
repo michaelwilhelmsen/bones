@@ -45,17 +45,6 @@ here or just use this to establish your typographical grid.
 /*********************
 FONT FACE (IN YOUR FACE)
 *********************/
-/*
-some nice typographical defaults
-more here: http://www.newnet-soft.com/blog/csstypography
-*/
-p {
-  -webkit-font-feature-settings: "liga", "dlig";
-  -moz-font-feature-settings: "liga=1, dlig=1";
-  -ms-font-feature-settings: "liga", "dlig";
-  -o-font-feature-settings: "liga", "dlig";
-  font-feature-settings: "liga", "dlig"; }
-
 /******************************************************************
 
 Stylesheet: Mixins Stylesheet
