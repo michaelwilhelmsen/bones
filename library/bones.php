@@ -316,5 +316,16 @@ function custom_excerpt( $num_words = 45, $ending = '...', $post_id = null, $mor
   return $excerpt;
 }
 
+// Returns featured image url, optional size argument.
+// Use like this: get_featured_image_url('thumbnail');
+function get_featured_image_url( $size = "full" ) {
+	global $post;
+
+	$fi_src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), $size );
+	$fi_url = $fi_src[0];
+
+	return $fi_url;
+}
+
 
 ?>

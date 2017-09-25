@@ -89,9 +89,7 @@ add_filter( 'login_headertitle', 'bones_login_title' );
 
 /*
 I don't really recommend editing the admin too much
-as things may get funky if WordPress updates. Here
-are a few funtions which you can choose to use if
-you like.
+as things may get funky if WordPress updates.
 */
 
 // Custom Backend Footer

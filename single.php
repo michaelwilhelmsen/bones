@@ -45,7 +45,7 @@
 									<p><?php _e( 'Uh Oh. Something is missing. Try double checking things.', 'screenpartner' ); ?></p>
 								</section>
 								<footer class="article-footer">
-										<p><?php _e( 'This is the error message in the single.php template.', 'screenpartner' ); ?></p>
+									<p><?php _e( 'This is the error message in the single.php template.', 'screenpartner' ); ?></p>
 								</footer>
 							</article>
 

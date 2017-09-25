@@ -18,18 +18,18 @@ if ( post_password_required() ) {
 
     <section class="commentlist">
       <?php
-        wp_list_comments( array(
-          'style'             => 'div',
-          'short_ping'        => true,
-          'avatar_size'       => 40,
-          'callback'          => 'bones_comments',
-          'type'              => 'all',
-          'reply_text'        => __('Reply', 'screenpartner'),
-          'page'              => '',
-          'per_page'          => '',
-          'reverse_top_level' => null,
-          'reverse_children'  => ''
-        ) );
+      wp_list_comments( array(
+        'style'             => 'div',
+        'short_ping'        => true,
+        'avatar_size'       => 40,
+        'callback'          => 'bones_comments',
+        'type'              => 'all',
+        'reply_text'        => __('Reply', 'screenpartner'),
+        'page'              => '',
+        'per_page'          => '',
+        'reverse_top_level' => null,
+        'reverse_children'  => ''
+      ) );
       ?>
     </section>
 
@@ -47,4 +47,3 @@ if ( post_password_required() ) {
   <?php endif; ?>
 
   <?php comment_form(); ?>
-
