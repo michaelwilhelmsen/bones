@@ -15,6 +15,7 @@
 
 						<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
+							<?php // Must use ACF PRO Plugin (Add JSON script for basic builder blueprint) ?>
 							<?php load_template(TEMPLATEPATH . '/library/modules/builder/builder.php'); ?>
 
 						<?php endwhile; else : ?>
